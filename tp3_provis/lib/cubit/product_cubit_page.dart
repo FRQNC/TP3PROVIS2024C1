@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tp3_provis/cubit/list_product_cubit.dart';
-import 'package:tp3_provis/cubit/product_state.dart';
+import 'package:tp3_provis/model/product_model.dart';
 
 
 class ProductCubit extends StatelessWidget {
