@@ -1,27 +1,43 @@
 class ProductModel {
-  int? id;
-  String? title;
-  String? description;
-  int? price;
-  double? discountPercentage;
-  double? rating;
-  int? stock;
-  String? brand;
-  String? category;
-  String? thumbnail;
-  List<String>? images;
+  final int id;
+  final String title;
+  final String description;
+  final num price;
+  final num discountPercentage;
+  final num rating;
+  final int stock;
+  final String brand;
+  final String category;
+  final String thumbnail;
+  final List<String> images;
 
   ProductModel({
-    this.id,
-    this.title,
-    this.description,
-    this.price,
-    this.discountPercentage,
-    this.rating,
-    this.stock,
-    this.brand,
-    this.category,
-    this.thumbnail,
-    this.images,
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.price,
+    required this.discountPercentage,
+    required this.rating,
+    required this.stock,
+    required this.brand,
+    required this.category,
+    required this.thumbnail,
+    required this.images,
   });
+
+  factory ProductModel.fromJson(Map<String, dynamic> json) {
+    return ProductModel(
+      id: json['id'],
+      title: json['title'],
+      description: json['description'],
+      price: (json['price'] as num).toDouble(),
+      discountPercentage: (json['discountPercentage'] as num).toDouble(),
+      rating: (json['rating'] as num).toDouble(),
+      stock: json['stock'],
+      brand: json['brand'],
+      category: json['category'],
+      thumbnail: json['thumbnail'],
+      images: List<String>.from(json['images']),
+    );
+  }
 }
