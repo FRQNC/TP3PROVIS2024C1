@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tp3_provis/cubit/product_cubit_page.dart';
-import 'package:tp3_provis/cubit/product_cubit_page.dart';
+import 'package:tp3_provis/pages/product_cubit_page.dart';
+import 'package:tp3_provis/pages/product_cubit_page.dart';
 
 void main() {
   runApp(const MyApp());
