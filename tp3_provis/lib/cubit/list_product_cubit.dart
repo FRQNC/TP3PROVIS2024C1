@@ -14,8 +14,8 @@ class ProductListCubit extends Cubit<List<ProductModel>> {
       title: e['title'],
       description: e['description'],
       price: e['price'],
-      discountPercentage: e['discountPercentage'],
-      rating: e['rating'],
+      discountPercentage: (e['discountPercentage']), // Convert to double
+        rating: (e['rating']), // Convert to double
       stock: e['stock'],
       brand: e['brand'],
       category: e['category'],

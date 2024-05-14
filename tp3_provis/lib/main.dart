@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tp3_provis/cubit/product_cubit_page.dart';
+import 'package:tp3_provis/cubit/product_cubit_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +15,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: const Color(0xFF4A707A),
+          secondary: const Color(0xFFC2C8C5),
+          tertiary: const Color(0xFF94B0B7),
+          onPrimary: const Color(0xFF37363B),
+          onSecondary: const Color(0xFFDDDDDA),
+          primaryContainer: const Color(0x5ED9D9D9),
+        ),
+        fontFamily: 'Poppins',
+        scaffoldBackgroundColor: Colors.white
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Tugas Praktikum : State Management & Web Service'),
     );
@@ -57,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ProductCubit()), // Navigasi ke halaman ProductCubit
+                  MaterialPageRoute(builder: (context) => ProductCubitPage()), // Navigasi ke halaman ProductCubit
                 );
               },
               child: Text('Bloc Page'),
@@ -68,4 +77,14 @@ class _MyHomePageState extends State<MyHomePage> {
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+mixin AppMixin{
+  FontWeight bold = FontWeight.w700;
+  FontWeight semi = FontWeight.w600;
+  FontWeight medium = FontWeight.w500;
+  FontWeight light = FontWeight.w500;
+  Color boxColor = Color(0xFFD9D9D9).withOpacity(0.45);
+  Color dividerColor = Color(0xFFD9D9D9);
+  double sideMargin = 20;
 }
